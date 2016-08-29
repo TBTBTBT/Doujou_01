@@ -4,7 +4,6 @@ public:
     ofVec2f pos;
     ofVec2f acc;
     float size;
-    float scale;
     void junbi(float,float);
     void ugokasu();
     void juuryoku(float,float);
