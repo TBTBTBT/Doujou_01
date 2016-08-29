@@ -1,0 +1,21 @@
+void BallSan::ugokasu(){
+    x += dx;
+    y += dy;
+}
+void BallSan::juuryoku(float gx,float gy){
+    float l = sqrt((gx - x) * (gx - x) + (gy - y) * (gy - y));
+    dx += ((gx - x)/l)/6;
+    dy += ((gy - y)/l)/6;
+    dx *= 0.99;
+    dy *= 0.99;
+}
+void BallSan::ataru(float hx,float hy,float r){
+    float l = sqrt((hx - x) * (hx - x) + (hy - y) * (hy - y));
+    if(l <= 50 ){
+        dx += -((hx-x)/l) * 2;
+        dy += -((hy-y)/l) * 2;
+    }
+}
+void BallSan::hyouji(){
+
+}
